@@ -8,11 +8,13 @@ a field reference for the commands that actually get used.
 
 ## Categories
 
-- [[Active Directory]] — users, computers, groups, OUs
+- [[Active Directory]] — domain users, computers, groups, OUs
+- [[Local Users and Groups]] — local machine accounts, not domain accounts
 - [[DNS]] — zones, records, cache
 - [[DHCP]] — scopes, leases, reservations
 - [[File Shares and Permissions]] — SMB shares, NTFS ACLs
-- [[Networking Diagnostics]] — connectivity, DNS resolution, ports
+- [[Networking Diagnostics]] — connectivity, IP config, DNS resolution
+- [[Firewall Rules]] — viewing/creating/removing rules, profiles, logging
 - [[System and Services]] — services, processes, features, updates, disks
 - [[Microsoft 365 and Exchange Online]] — connecting, mailboxes, licensing
 

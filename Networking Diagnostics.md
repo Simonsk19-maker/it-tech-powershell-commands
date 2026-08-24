@@ -1,5 +1,7 @@
 # Networking Diagnostics — PowerShell Commands
 
+See [[Firewall Rules]] for creating/managing Windows Firewall rules.
+
 ## Connectivity
 
 ```powershell
@@ -29,19 +31,6 @@ Restart-NetAdapter -Name "Ethernet"
 # Set a static IP
 New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.1.10 -PrefixLength 24 -DefaultGateway 192.168.1.1
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 192.168.1.1
-```
-
-## Firewall
-
-```powershell
-# List all firewall rules that are enabled
-Get-NetFirewallRule -Enabled True | Select-Object DisplayName, Direction, Action
-
-# Open a port
-New-NetFirewallRule -DisplayName "Allow RDP" -Direction Inbound -Protocol TCP -LocalPort 3389 -Action Allow
-
-# Check if Windows Firewall is even on
-Get-NetFirewallProfile | Select-Object Name, Enabled
 ```
 
 ## Shares / network paths
